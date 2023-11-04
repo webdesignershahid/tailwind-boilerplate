@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+        font-size: 56%;
+        -webkit-text-size-adjust: 100%;
+    }
+    @screen md {
+      html {
+        font-size: 52.5%;
+      }
+    }
+    @screen xl {
+        html {
+            font-size: 58.5%;
+        }
+	}
+	@screen 2xl {
+        html {
+            font-size: 62.5%;
+        }
+	}
+    body {
+        @apply text-[1.6rem] leading-[1.7];
+    }
+    p {        
+        @apply text-[1.6rem] text-black dark:text-white;
+        line-height: 2em;
+    }
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+    .inline-flex-center {
+        @apply inline-flex items-center justify-center;
+    }
+    .position-center {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .stretched-link::after {
+        @apply absolute inset-0 z-[1] content-[''];
+    }
+}
